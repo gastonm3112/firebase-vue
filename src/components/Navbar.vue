@@ -14,7 +14,7 @@
             <router-link to="/about">About</router-link>
           </li>
           <li>
-            <router-link class="waves-effect waves-light btn" to="/"
+            <router-link class="waves-effect waves-light btn" to="/proyectos"
               >Proyectos</router-link
             >
           </li>
@@ -30,9 +30,7 @@
         <router-link to="/about">About</router-link>
       </li>
       <li>
-        <router-link class="waves-effect waves-light btn" to="/"
-          >Proyectos</router-link
-        >
+        <router-link to="/proyectos">Proyectos</router-link>
       </li>
     </ul>
   </div>
