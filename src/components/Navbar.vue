@@ -1,7 +1,7 @@
 <template>
   <div class="navbar">
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper cyan darken-1">
         <router-link class="brand-logo" to="/">Proyectos</router-link>
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
@@ -14,7 +14,9 @@
             <router-link to="/about">About</router-link>
           </li>
           <li>
-            <router-link class="waves-effect waves-light btn" to="/proyectos"
+            <router-link
+              class="waves-effect waves-light btn red accent-2"
+              to="/proyectos"
               >Proyectos</router-link
             >
           </li>
