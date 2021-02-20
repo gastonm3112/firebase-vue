@@ -13,6 +13,11 @@
           <li>
             <router-link to="/about">About</router-link>
           </li>
+          <li>
+            <router-link class="waves-effect waves-light btn" to="/"
+              >Proyectos</router-link
+            >
+          </li>
         </ul>
       </div>
     </nav>
@@ -23,6 +28,11 @@
       </li>
       <li>
         <router-link to="/about">About</router-link>
+      </li>
+      <li>
+        <router-link class="waves-effect waves-light btn" to="/"
+          >Proyectos</router-link
+        >
       </li>
     </ul>
   </div>
