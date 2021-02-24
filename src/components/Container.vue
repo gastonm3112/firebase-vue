@@ -10,7 +10,7 @@
 import CardProject from "./CardProject.vue";
 export default {
   data: () => ({
-    projects: null,
+    projects: {},
   }),
   components: { CardProject },
   mounted() {
