@@ -1,11 +1,20 @@
 <template>
-  <div class="proyectos">
+  <div class="container">
     <h1>Vista Proyectos</h1>
+
+    <Container />
   </div>
 </template>
 
 <script>
-export default {};
+import Container from "../components/Container";
+export default {
+  components: {
+    Container,
+  },
+};
 </script>
 
 <style></style>
+
+Container
