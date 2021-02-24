@@ -27,7 +27,7 @@ const routes = [
     path: '/reg-projects',
     name: 'Created',
     // route level code-splitting
-    // this generates a separate chunk (create.[hash].js) for this route
+    // this generates a separate chunk (created.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "reg-projects" */ '../views/Created.vue')
   },
