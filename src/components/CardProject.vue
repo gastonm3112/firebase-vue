@@ -2,10 +2,11 @@
   <div class="card horizontal">
     <div class="card-stacked">
       <div class="card-content">
-        <span class="card-title">Card Title</span>
+        <span class="card-title"> {{ data.name }} </span>
         <p>
-          Descripción de mi Proyecto
+          {{ data.description }}
         </p>
+        <p>tecnologías: {{ data.langs }}</p>
       </div>
       <div class="card-action">
         <div class="row">
@@ -22,5 +23,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    data: Object,
+  },
+};
 </script>
