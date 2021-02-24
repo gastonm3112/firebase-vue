@@ -56,5 +56,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    project: {
+      title: "",
+      description: "",
+      langs: [],
+      status: true,
+    },
+  }),
+};
 </script>
