@@ -10,7 +10,7 @@
 import CardProject from "./CardProject.vue";
 export default {
   data: () => ({
-    projects: {},
+    projects: [],
   }),
   components: { CardProject },
   mounted() {
@@ -21,14 +21,16 @@ export default {
     //.json debe colocarse al final de la URL
     async getProjects() {
       const res = await fetch(
-        "https://crud-en-vue3-default-rtdb.firebaseio.com/projects/project.json"
+        "https://crud-en-vue3-default-rtdb.firebaseio.com/projects.json"
       );
-
       const data = await res.json();
 
-      this.projects = data;
+      for (let i in data) {
+        this.projects.push(data[i]);
+        //console.log(data[i]);
+      }
 
-      console.log(data);
+      //console.log(this.projects);
     },
   },
 };
