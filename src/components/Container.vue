@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col s12 m7">
-      <CardProject :data="projects" />
+      <CardProject v-for="(project, i) in projects" :key="i" :data="project" />
     </div>
   </div>
 </template>

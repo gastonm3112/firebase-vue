@@ -2,7 +2,7 @@
   <div class="card horizontal">
     <div class="card-stacked">
       <div class="card-content">
-        <span class="card-title"> {{ data.name }} </span>
+        <span class="card-title"> {{ data.title }} </span>
         <p>
           {{ data.description }}
         </p>
