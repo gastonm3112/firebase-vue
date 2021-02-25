@@ -6,7 +6,16 @@
         <p>
           {{ data.description }}
         </p>
-        <p>tecnologías: {{ data.langs }}</p>
+        <p>
+          tecnologías:
+          <span v-for="(lang, i) in data.langs" :key="i">
+            {{
+              i < data.langs.length - 1
+                ? `${lang}, `.toUpperCase()
+                : lang.toUpperCase()
+            }}
+          </span>
+        </p>
       </div>
       <div class="card-action">
         <div class="row">
@@ -28,7 +37,7 @@
 <script>
 export default {
   props: {
-    data: Array,
+    data: Object,
   },
 };
 </script>
