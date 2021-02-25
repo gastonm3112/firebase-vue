@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
-      <form class="col s12">
+      <form @submit.prevent="registrarProyecto" class="col s12">
         <div class="row">
           <div class="input-field col s12">
             <input
@@ -65,7 +65,6 @@
           </button>
         </div>
       </form>
-      {{ project }}
     </div>
   </div>
 </template>
@@ -80,5 +79,16 @@ export default {
       status: true,
     },
   }),
+  methods: {
+    async registrarProyecto() {
+      await fetch(
+        "https://crud-en-vue3-default-rtdb.firebaseio.com/projects.json",
+        {
+          method: "POST",
+          body: JSON.stringify(this.project),
+        }
+      );
+    },
+  },
 };
 </script>
