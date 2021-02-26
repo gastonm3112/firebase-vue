@@ -5,7 +5,7 @@
     <div class="row">
       <router-link
         to="/reg-projects"
-        class="col s12 waves-effect waves-light btn"
+        class="col s12 waves-effect waves-light btn light-blue accent-3"
       >
         <i class="material-icons">add</i>
         Crear Proyecto
