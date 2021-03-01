@@ -18,8 +18,9 @@
               type="text"
               class="validate"
               v-model="project.title"
+              placeholder="Nombre del Proyecto"
             />
-            <label for="project_name">Nombre del Proyecto</label>
+            <label for="project_name"></label>
           </div>
           <div class="input-field col s12">
             <input
@@ -27,8 +28,9 @@
               type="text"
               class="validate"
               v-model="project.description"
+              placeholder="Descripción del Proyecto"
             />
-            <label for="project_description">Descripción del Proyecto</label>
+            <label for="project_description"></label>
           </div>
           <p>
             <label>
@@ -81,12 +83,7 @@
 <script>
 export default {
   data: () => ({
-    project: {
-      title: "",
-      description: "",
-      langs: [],
-      status: true,
-    },
+    project: {},
   }),
   mounted() {
     this.getProject();
@@ -100,6 +97,8 @@ export default {
       );
 
       const data = await res.json();
+
+      this.project = data;
     },
     // async registrarProyecto() {
     //   await fetch(
