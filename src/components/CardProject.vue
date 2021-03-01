@@ -20,7 +20,7 @@
       <div class="card-action">
         <div class="row">
           <router-link
-            to="/reg-projects"
+            to="/edit-projects"
             class="col s6 waves-effect waves-light btn"
           >
             <i class="material-icons">edit</i>
