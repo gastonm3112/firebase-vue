@@ -2,15 +2,15 @@
   <div class="card horizontal">
     <div class="card-stacked">
       <div class="card-content">
-        <span class="card-title"> {{ data.title }} </span>
+        <span class="card-title"> {{ data.data.title }} </span>
         <p>
-          {{ data.description }}
+          {{ data.data.description }}
         </p>
         <p>
           tecnologías:
-          <span v-for="(lang, i) in data.langs" :key="i">
+          <span v-for="(lang, i) in data.data.langs" :key="i">
             {{
-              i < data.langs.length - 1
+              i < data.data.langs.length - 1
                 ? `${lang}, `.toUpperCase()
                 : lang.toUpperCase()
             }}
@@ -20,7 +20,7 @@
       <div class="card-action">
         <div class="row">
           <router-link
-            to="/edit-projects"
+            :to="`/edit-projects/${data.id}`"
             class="col s6 waves-effect waves-light btn"
           >
             <i class="material-icons">edit</i>
