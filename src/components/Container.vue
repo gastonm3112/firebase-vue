@@ -26,7 +26,10 @@ export default {
       const data = await res.json();
 
       for (let i in data) {
-        this.projects.push(data[i]);
+        this.projects.push({
+          id: i,
+          data: data[i],
+        });
         //console.log(data[i]);
       }
 
