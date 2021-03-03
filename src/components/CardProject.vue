@@ -46,13 +46,18 @@ export default {
     async deleteProject() {
       const id = this.data.id;
 
-      await fetch(
+      const res = await fetch(
         `https://crud-en-vue3-default-rtdb.firebaseio.com/projects/${id}.json`,
         {
           method: "PATCH",
           body: JSON.stringify({ status: false }),
         }
       );
+
+      const data = await res.json();
+
+      //Elimina la vista de las Cards de forma reactiva
+      this.data.data.status = data["status"];
     },
   },
 };
