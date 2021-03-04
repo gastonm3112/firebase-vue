@@ -2,23 +2,38 @@
   <div class="container">
     <h2>Registrar Usuario</h2>
     <div class="row">
-      <form @submit.prevent="" class="col s12">
+      <form @submit.prevent="validateUser" class="col s12">
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate" />
+            <input
+              v-model.trim="email"
+              id="email"
+              type="email"
+              class="validate"
+            />
             <label for="email">Email</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="password" type="password" class="validate" />
+            <input
+              v-model.trim="pass1"
+              id="password"
+              type="password"
+              class="validate"
+            />
             <label for="password">Password</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="password" type="password" class="validate" />
-            <label for="password">Confirmar Password</label>
+            <input
+              v-model.trim="pass2"
+              id="passwordConfirm"
+              type="password"
+              class="validate"
+            />
+            <label for="passwordConfirm">Confirmar Password</label>
           </div>
         </div>
         <button
@@ -35,5 +50,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    email: "",
+    pass1: "",
+    pass2: "",
+  }),
+
+  methods: {
+    validateUser() {
+      if (
+        this.pass1.length >= 6 &&
+        this.pass1 === this.pass2 &&
+        this.email != ""
+      ) {
+        return console.log("Contraseña valida");
+      } else {
+        return;
+      }
+    },
+  },
+};
 </script>
