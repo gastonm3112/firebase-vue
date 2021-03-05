@@ -8,10 +8,14 @@
         >
         <ul class="right hide-on-med-and-down">
           <li>
-            <router-link to="/">Home</router-link>
+            <router-link to="/">Sign Up</router-link>
           </li>
           <li>
-            <router-link to="/about">About</router-link>
+            <router-link
+              class="btn waves-effect waves-green transparent"
+              to="/login"
+              >Sign In</router-link
+            >
           </li>
           <li>
             <router-link
@@ -26,10 +30,10 @@
 
     <ul class="sidenav" id="mobile-demo">
       <li>
-        <router-link to="/">Home</router-link>
+        <router-link to="/">Sign Up</router-link>
       </li>
       <li>
-        <router-link to="/about">About</router-link>
+        <router-link to="/login">Sign In</router-link>
       </li>
       <li>
         <router-link to="/proyectos">Proyectos</router-link>
