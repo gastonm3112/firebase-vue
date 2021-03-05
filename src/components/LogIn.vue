@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <h2>Ingreso Usuario</h2>
+    <div v-if="errors" class="card-panel red darken-2 white-text">
+      <h5>Email / Password inválidos</h5>
+    </div>
     <div class="row">
       <form @submit.prevent="validateUser" class="col s12">
         <div class="row">
@@ -42,11 +45,12 @@ export default {
   data: () => ({
     email: "",
     pass: "",
+    errors: false,
   }),
 
   methods: {
     async validateUser() {
-      if (this.pass1.length >= 6 && this.email != "") {
+      if (this.pass.length >= 6 && this.email != "") {
         const API_KEY = "AIzaSyBx0E4xI7MV8n5QBkVbzAllaaX6damASas";
 
         const res = await fetch(
@@ -61,7 +65,13 @@ export default {
           }
         );
 
-        console.log(await res.json());
+        const data = await res.json();
+
+        if (data.error) {
+          this.errors = true;
+        } else {
+          this.errors = false;
+        }
       } else {
         return;
       }
