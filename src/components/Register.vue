@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import router from "../router/index";
+
 export default {
   data: () => ({
     email: "",
@@ -78,6 +80,7 @@ export default {
           }
         );
 
+        router.push("/proyectos");
         console.log(await res.json());
       } else {
         return;
