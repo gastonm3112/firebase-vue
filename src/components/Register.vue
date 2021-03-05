@@ -58,13 +58,27 @@ export default {
   }),
 
   methods: {
-    validateUser() {
+    async validateUser() {
       if (
         this.pass1.length >= 6 &&
         this.pass1 === this.pass2 &&
         this.email != ""
       ) {
-        return console.log("Contraseña valida");
+        const API_KEY = "AIzaSyBx0E4xI7MV8n5QBkVbzAllaaX6damASas";
+
+        const res = await fetch(
+          `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`,
+          {
+            method: "POST",
+            body: JSON.stringify({
+              email: this.email,
+              password: this.pass1,
+              returnSecureToken: true,
+            }),
+          }
+        );
+
+        console.log(await res.json());
       } else {
         return;
       }
