@@ -90,8 +90,9 @@ export default {
   }),
   methods: {
     async registrarProyecto() {
+      const user = JSON.parse(localStorage.getItem("user"));
       await fetch(
-        "https://crud-en-vue3-default-rtdb.firebaseio.com/projects.json",
+        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects.json?auth=${user.idToken}`,
         {
           method: "POST",
           body: JSON.stringify(this.project),

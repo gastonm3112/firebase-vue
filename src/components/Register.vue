@@ -79,9 +79,10 @@ export default {
             }),
           }
         );
+        const data = await res.json();
+        localStorage.setItem("user", JSON.stringify(data));
 
         router.push("/proyectos");
-        console.log(await res.json());
       } else {
         return;
       }

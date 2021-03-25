@@ -73,6 +73,8 @@ export default {
           this.errors = true;
         } else {
           this.errors = false;
+          console.log(data);
+          localStorage.setItem("user", JSON.stringify(data));
           router.push("/proyectos");
         }
       } else {
