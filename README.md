@@ -18,7 +18,7 @@ I use this technologies to build this app:
 I practice the concepts of Vuejs of routes, router, hooks, life cycle, props
 
 
-I learn how to work with Firebase to make petitions to a server (GET, POST, PATCH)
+I learn how to work with Firebase to make petitions to a server (GET, POST, PATCH), validate users, validate request, etc.
 
 
 ## Project setup
