@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <h2>Ingreso Usuario</h2>
+    <h2>Ingreso</h2>
+    <p class="grey-text text-darken-1">
+      Ingresa y comienza a ordenar tus tareas o proyectos
+    </p>
     <div v-if="errors" class="card-panel red darken-2 white-text">
       <h5>Email / Password inválidos</h5>
     </div>
