@@ -93,7 +93,7 @@ export default {
       const id = this.$route.params.id;
       const user = JSON.parse(localStorage.getItem("user"));
       const res = await fetch(
-        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects/${id}.json?auth=${user.idToken}`
+        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects/${user.localId}/${id}.json?auth=${user.idToken}`
       );
 
       const data = await res.json();
@@ -103,8 +103,9 @@ export default {
     async updateProject() {
       const id = this.$route.params.id;
       const user = JSON.parse(localStorage.getItem("user"));
+
       await fetch(
-        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects/${id}.json?auth=${user.idToken}`,
+        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects/${user.localId}/${id}.json?auth=${user.idToken}`,
         {
           method: "PATCH",
           body: JSON.stringify(this.project),

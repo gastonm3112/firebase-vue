@@ -23,7 +23,7 @@ export default {
       const user = JSON.parse(localStorage.getItem("user"));
 
       const res = await fetch(
-        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects.json?auth=${user.idToken}`
+        `https://crud-en-vue3-default-rtdb.firebaseio.com/projects/${user.localId}.json?auth=${user.idToken}`
       );
       const data = await res.json();
 
